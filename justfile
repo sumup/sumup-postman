@@ -7,4 +7,4 @@ _help:
 
 # Generate postman collection
 generate:
-    npx openapi-to-postmanv2 -s openapi.json -o SumUpAPICollection.json -p -O folderStrategy=Tags,includeAuthInfoInExample=false
+    npx openapi-to-postmanv2 -s openapi.json -o SumUpAPICollection.json -p -O folderStrategy=Tags,includeAuthInfoInExample=false,alwaysInheritAuthentication=true
