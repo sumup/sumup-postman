@@ -22,10 +22,7 @@ jobs:
         with:
           node-version: 20
 
-      # https://github.com/postmanlabs/openapi-to-postman
-      - run: npm i -g openapi-to-postmanv2
-
-      - run: openapi2postmanv2 -s openapi.json -o SumUpAPICollection.json -p -O folderStrategy=Tags,includeAuthInfoInExample=falseg
+      - run: npx openapi-to-postmanv2 -s openapi.json -o SumUpAPICollection.json -p -O folderStrategy=Tags,includeAuthInfoInExample=false
 
       - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
         with:
