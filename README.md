@@ -23,7 +23,7 @@ From the [SumUp's public workspace](https://www.postman.com/sumupengineering/wor
 And select `Create a fork`:
 
 <p align="center">
-  <img width="460" src="/.github/assets/fork.png">
+  <img width="420" src="/.github/assets/fork.png">
 </p>
 
 ### Import SumUp API collection
@@ -41,5 +41,5 @@ In the import dialog, paste in the SumUp API Collection URL: `https://raw.github
 To make request you will need to authorize. The easiest way to do that it to [create an API key](https://developer.sumup.com/api-keys) from the Developer portal. Open the collection, click on `Authorization` tab, select `Auth Type` `Bearer Token`, and paste your API key as the token.
 
 <p align="center">
-  <img width="540" src="/.github/assets/authorization.png">
+  <img width="800" src="/.github/assets/authorization.png">
 </p>
