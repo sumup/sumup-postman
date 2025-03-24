@@ -1101,9 +1101,11 @@
                       "$ref": "#/components/schemas/Currency"
                     },
                     "pay_to_email": {
-                      "description": "Email address of the registered user (merchant) to whom the payment is made. It is highly recommended to use `merchant_code` instead of `pay_to_email`.",
+                      "description": "Email address of the registered user (merchant) to whom the payment is made.",
                       "type": "string",
-                      "format": "email"
+                      "format": "email",
+                      "deprecated": true,
+                      "x-deprecation-notice": "`pay_to_email` is deprecated, use `merchant_code` instead."
                     },
                     "merchant_code": {
                       "description": "Unique identifying code of the merchant profile.",
@@ -4572,6 +4574,7 @@
         "tags": [
           "Subaccounts"
         ],
+        "x-deprecation-notice": "Subaccounts API is deprecated, to list users in your merchant account please use [List members](https://developer.sumup.com/api/members/list) instead.",
         "x-permissions": [
           "members_list"
         ],
@@ -4662,6 +4665,7 @@
         "tags": [
           "Subaccounts"
         ],
+        "x-deprecation-notice": "Subaccounts API is deprecated, to create an user in your merchant account please use [Create member](https://developer.sumup.com/api/members/create) instead.",
         "x-permissions": [
           "members_update"
         ],
@@ -4708,6 +4712,7 @@
         "tags": [
           "Subaccounts"
         ],
+        "x-deprecation-notice": "Subaccounts API is deprecated, to get an user that's a member of your merchant account please use [Get member](https://developer.sumup.com/api/members/get) instead.",
         "x-permissions": [
           "members_view"
         ],
@@ -4808,6 +4813,7 @@
         "tags": [
           "Subaccounts"
         ],
+        "x-deprecation-notice": "Subaccounts API is deprecated, to update an user that's a member of your merchant account please use [Update member](https://developer.sumup.com/api/members/update) instead.",
         "x-permissions": [
           "members_update"
         ],
@@ -4851,6 +4857,7 @@
         "tags": [
           "Subaccounts"
         ],
+        "x-deprecation-notice": "Subaccounts API is deprecated, to remove an user that's a member of your merchant account please use [Delete member](https://developer.sumup.com/api/members/delete) instead.",
         "x-permissions": [
           "members_delete"
         ],
@@ -4896,6 +4903,7 @@
         "tags": [
           "Subaccounts"
         ],
+        "x-deprecation-notice": "Subaccounts API is deprecated, to remove an user that's a member of your merchant account please use [Delete member](https://developer.sumup.com/api/members/delete) instead.",
         "x-permissions": [
           "members_write"
         ],
@@ -4969,6 +4977,7 @@
         "tags": [
           "Subaccounts"
         ],
+        "x-deprecation-notice": "Subaccounts API is deprecated, to update an user that's a member of your merchant account please use [Update member](https://developer.sumup.com/api/members/update) instead.",
         "x-permissions": [
           "members_write"
         ],
@@ -6909,9 +6918,11 @@
             "type": "string"
           },
           "pay_to_email": {
-            "description": "Email address of the registered user (merchant) to whom the payment is made. It is highly recommended to use `merchant_code` instead of `pay_to_email`.",
+            "description": "Email address of the registered user (merchant) to whom the payment is made.",
             "type": "string",
-            "format": "email"
+            "format": "email",
+            "deprecated": true,
+            "x-deprecation-notice": "`pay_to_email` is deprecated, use `merchant_code` instead."
           },
           "description": {
             "description": "Short description of the checkout visible in the SumUp dashboard. The description can contribute to reporting, allowing easier identification of a checkout.",
@@ -7103,9 +7114,11 @@
             "$ref": "#/components/schemas/Currency"
           },
           "pay_to_email": {
-            "description": "Email address of the registered user (merchant) to whom the payment is made. It is highly recommended to use `merchant_code` instead of `pay_to_email`.",
+            "description": "Email address of the registered user (merchant) to whom the payment is made.",
             "type": "string",
-            "format": "email"
+            "format": "email",
+            "deprecated": true,
+            "x-deprecation-notice": "`pay_to_email` is deprecated, use `merchant_code` instead."
           },
           "merchant_code": {
             "description": "Unique identifying code of the merchant profile.",
@@ -7286,9 +7299,11 @@
             "$ref": "#/components/schemas/Currency"
           },
           "pay_to_email": {
-            "description": "Email address of the registered user (merchant) to whom the payment is made. It is highly recommended to use `merchant_code` instead of `pay_to_email`.",
+            "description": "Email address of the registered user (merchant) to whom the payment is made.",
             "type": "string",
-            "format": "email"
+            "format": "email",
+            "deprecated": true,
+            "x-deprecation-notice": "`pay_to_email` is deprecated, use `merchant_code` instead."
           },
           "merchant_code": {
             "description": "Unique identifying code of the merchant profile.",
