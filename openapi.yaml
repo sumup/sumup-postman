@@ -1227,13 +1227,6 @@ paths:
       responses:
         '204':
           description: No Content
-          content:
-            application/json:
-              schema:
-                type: object
-              examples:
-                NoBody:
-                  value: {}
         '401':
           description: Unauthorized
           content:
@@ -1318,13 +1311,6 @@ paths:
       responses:
         '204':
           description: No Content
-          content:
-            application/json:
-              schema:
-                type: object
-              examples:
-                NoBody:
-                  value: {}
         '404':
           description: Not Found
           content:
@@ -3566,7 +3552,7 @@ paths:
               path: github.com/sumup/identity/apps/portier-backend/internal/domain/memberships
       responses:
         '200':
-          description: Returns the deleted Role object if the deletion succeeded.
+          description: Returns an empty response if the role deletion succeeded.
         '400':
           description: Invalid request.
         '404':
@@ -7175,22 +7161,8 @@ components:
             $ref: '#/components/schemas/TransactionFull'
     NoBodyResponse:
       description: No Content
-      content:
-        application/json:
-          schema:
-            type: object
-          examples:
-            NoBody:
-              value: {}
     ErrorBadRequest:
       description: No Content
-      content:
-        application/json:
-          schema:
-            type: object
-          examples:
-            NoBody:
-              value: {}
     ErrorNotAuthorized:
       description: Unauthorized
       content:
