@@ -1794,19 +1794,7 @@
         "description": "Deactivates an identified card payment instrument resource for a customer.",
         "responses": {
           "204": {
-            "description": "No Content",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object"
-                },
-                "examples": {
-                  "NoBody": {
-                    "value": {}
-                  }
-                }
-              }
-            }
+            "description": "No Content"
           },
           "401": {
             "description": "Unauthorized",
@@ -1938,19 +1926,7 @@
         },
         "responses": {
           "204": {
-            "description": "No Content",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object"
-                },
-                "examples": {
-                  "NoBody": {
-                    "value": {}
-                  }
-                }
-              }
-            }
+            "description": "No Content"
           },
           "404": {
             "description": "Not Found",
@@ -5354,7 +5330,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Returns the deleted Role object if the deletion succeeded."
+            "description": "Returns an empty response if the role deletion succeeded."
           },
           "400": {
             "description": "Invalid request."
@@ -10195,34 +10171,10 @@
         }
       },
       "NoBodyResponse": {
-        "description": "No Content",
-        "content": {
-          "application/json": {
-            "schema": {
-              "type": "object"
-            },
-            "examples": {
-              "NoBody": {
-                "value": {}
-              }
-            }
-          }
-        }
+        "description": "No Content"
       },
       "ErrorBadRequest": {
-        "description": "No Content",
-        "content": {
-          "application/json": {
-            "schema": {
-              "type": "object"
-            },
-            "examples": {
-              "NoBody": {
-                "value": {}
-              }
-            }
-          }
-        }
+        "description": "No Content"
       },
       "ErrorNotAuthorized": {
         "description": "Unauthorized",
