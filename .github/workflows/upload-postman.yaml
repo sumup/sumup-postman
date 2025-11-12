@@ -1,0 +1,43 @@
+name: Upload Postman Collection
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
+      - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+        with:
+          node-version: 20
+
+      - run: npx openapi-to-postmanv2 -s openapi.json -o SumUpAPICollection.json -p -O folderStrategy=Tags,includeAuthInfoInExample=false
+
+      - name: Prepare Postman payload
+        run: |
+          jq '{collection: .}' SumUpAPICollection.json > postman-payload.json
+
+      - name: Upload Postman collection
+        env:
+          POSTMAN_API_KEY: ${{ secrets.POSTMAN_API_KEY }}
+          POSTMAN_COLLECTION_ID: ${{ secrets.POSTMAN_COLLECTION_ID }}
+        run: |
+          response_file="$(mktemp)"
+          status_code="$(
+            curl -sS -o "$response_file" -w "%{http_code}" \
+              -X PUT "https://api.getpostman.com/collections/${POSTMAN_COLLECTION_ID}" \
+              -H "X-Api-Key: ${POSTMAN_API_KEY}" \
+              -H "Content-Type: application/json" \
+              --data-binary @postman-payload.json
+          )"
+
+          cat "$response_file"
+
+          if [[ "$status_code" -ge 400 ]]; then
+            echo "Postman API returned status $status_code"
+            exit 1
+          fi
