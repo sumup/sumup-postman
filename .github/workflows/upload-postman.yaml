@@ -29,7 +29,7 @@ jobs:
           response_file="$(mktemp)"
           status_code="$(
             curl -sS -o "$response_file" -w "%{http_code}" \
-              -X PUT "https://api.getpostman.com/collections/${POSTMAN_COLLECTION_ID}" \
+              -X PUT "https://api.getpostman.com/collections/646ec366-4881-41f6-9ec1-c19e9b22ddb7" \
               -H "X-Api-Key: ${POSTMAN_API_KEY}" \
               -H "Content-Type: application/json" \
               --data-binary @postman-payload.json
